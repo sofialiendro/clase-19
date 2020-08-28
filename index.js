@@ -47,7 +47,21 @@
 
 const img = document.querySelector("img")
 
-img.ondblclick = () => {
+// img.ondblclick = () => {
+//     const corazon = document.querySelector(".fa.fa-heart")
+//     corazon.classList.add("rojo")
+// }
+
+
+img.onclick = () => {
     const corazon = document.querySelector(".fa.fa-heart")
-    corazon.classList.add("rojo")
+    if (corazon.classList.contains("rojo")) {
+        corazon.classList.remove("rojo")
+        likes.textContent = 0
+    }
+
+    else {
+        corazon.classList.add("rojo")
+        likes.textContent = "1"
+    }
 }
